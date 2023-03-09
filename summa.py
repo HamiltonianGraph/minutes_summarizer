@@ -24,7 +24,7 @@ def split_pdf(fpath,chunk_chars=3000,overlap=50):
 
 def create_vector_db(splits):
     """ Create a vecctor DB index of the PDF """
-    embeddings = OpenAIEmbeddings(openai_api_key="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")
+    embeddings = OpenAIEmbeddings(openai_api_key="<YOUR-API-KEY>")
     return FAISS.from_texts(splits,embeddings)
 
 splits = split_pdf('testminutes.pdf')
